@@ -1,0 +1,105 @@
+.hero
+  background: url(../img/index/hero/hero-background.jpg) center no-repeat
+  background-size: cover
+  padding: 210px 0 190px 0
+  text-align: center
+  position: relative
+  margin-bottom: 24px
+  &__eagle
+    //display: none
+    position: relative
+    img
+      position: absolute
+      bottom: -40px
+      right: -5px
+      z-index: 99
+  &__title
+    position: relative
+    color: #ffffff
+    +boldFranklin
+    font-size: 170px
+    line-height: 24px
+    text-transform: uppercase
+    margin: 0 auto
+    margin-bottom: 25px
+    z-index: 100
+    &:after
+      content: ""
+      max-width: 583px
+      border-bottom: 1px solid #fff
+      display: block
+      margin: auto
+      margin-top: 90px
+  &__subtitle
+    display: block
+    margin: 0 auto
+    margin-bottom: 34px
+    max-width: 770px
+    color: #ffffff
+    +regOpenSans
+    font-size: 19px
+    line-height: 27px
+  &__btn
+    //max-width: 150px
+    width: 198px
+    height: 55px
+    background-color: transparent
+    border: 2px solid #fff
+    border-radius: 30px
+    padding: 12px 28px 12px 28px
+    &:hover
+      background-color: $main-color
+    
+
+@media (max-width: 1200px)
+  .hero
+    &__title
+      font-size: 140px
+
+@media (max-width: 850px)
+  .hero 
+    padding: 150px 0 130px 0
+    &__eagle
+      display: none
+    &__title
+      font-size: 100px
+      &:after
+        max-width: 400px
+        margin-top: 60px
+    &__subtitle
+      max-width: 550px
+      font-size: 14px
+      margin-bottom: 25px
+    &__btn
+      width: 155px
+      height: 40px
+      padding: 6px 15px 8px 15px
+     
+
+@media (max-width: 610px)
+  .hero
+    padding: 110px 0 90px 0
+    &__title
+      font-size: 70px
+      margin-bottom: 15px
+      &:after
+        max-width: 250px
+        margin-top: 35px
+    &__subtitle
+      max-width: 390px
+      font-size: 12px
+      line-height: 22px
+
+@media (max-width: 450px)
+  .hero
+    padding: 80px 0 60px 0
+    &__title
+      font-size: 50px
+      margin-bottom: 10px
+      &:after
+        max-width: 175px
+        margin-top: 25px
+    &__subtitle
+      max-width: 275px
+      font-size: 10px
+      line-height: 18px

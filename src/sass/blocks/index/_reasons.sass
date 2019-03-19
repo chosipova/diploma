@@ -1,0 +1,38 @@
+.reasons
+  padding-bottom: 86px
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-direction: row
+    text-align: center
+    flex-wrap: wrap
+  &__item
+    color: $main-text
+    line-height: 21px
+    margin: auto
+    margin-top: 60px
+  &__image
+    margin-bottom: 16px
+  &__title
+    +boldRoboto
+    font-size: 17px
+    text-transform: uppercase
+    margin-bottom: 5px
+  &__text
+    max-width: 359px
+    +regRoboto
+    font-size: 13.5px
+    text-align: justify
+    text-align-last: center
+
+@media (max-width: 768px)
+  .reasons
+    padding-bottom: 40px
+    &__item
+      margin-top: 30px
+      line-height: 16px
+    &__title
+      font-size: 13px
+    &__text
+      font-size: 11px
