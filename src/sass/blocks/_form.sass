@@ -32,7 +32,7 @@
     padding-left: 45px
     padding-top: 20px
     background: url('../img/form/massage.png') top left no-repeat
-    background-position: 2% 20%
+    background-position: 15px 20%
     background-color: #fff
     vertical-align: top
   &__button
@@ -40,9 +40,13 @@
     margin: auto
     margin-top: 28px
 
-@media (max-width: 1124px)
+@media (max-width: 920px)
   .form
+    &-inputs
+      flex-direction: column
     &__input
+      width: 100%
       font-size: 10px
+      margin-bottom: 10px
     &__mail
       font-size: 10px

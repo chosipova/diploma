@@ -1,0 +1,105 @@
+.rooms
+  padding: 42px 0 50px 0
+  border-top: 5px solid rgba($border, 0.5)
+  margin-top: 16px
+  &-nav
+    margin-top: 10px
+  &__title
+    margin-bottom: 6px
+    font-size: 30px
+  &__item
+    padding: 28px 0
+    border-bottom: 1px solid #efefef
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    &:last-child
+      border: none
+  &-slider
+    width: 40%
+    &_nav
+      width: 130px
+      height: 80px
+      margin: 0 4px
+  &-text
+    margin-left: 28px
+  &__subtitle
+    color: $main-color
+    font-size: 19px
+    text-transform: none
+    margin-top: 10px
+    margin-bottom: 8px
+    &:before
+      content: ""
+      border-bottom: 2px solid #cccccc
+      max-width: 40px
+      margin-bottom: 15px
+      display: block
+  &__description
+    font-size: 14px
+    line-height: 22px
+    margin: 0
+    margin-bottom: 13px
+  &__price
+    display: block
+    +regRoboto
+    font-size: 14px
+    line-height: 22px
+    margin-bottom: 7px
+  &_margin3
+    margin-top: 36px
+  &_margin4
+    margin-top: 58px
+  &_margin6
+    margin-top: 35px
+  &__notice
+    display: block
+    color: #959595
+    font-size: 12px
+    +regRoboto
+    margin-bottom: 28px
+  &_margin5
+    margin-bottom: 50px
+  &_margin7
+    margin-bottom: 50px
+
+@media (max-width: 1124px)
+  .rooms
+    &__item
+      flex-direction: column-reverse
+    &-text
+      margin-left: 0
+      margin-bottom: 20px
+    &-slider
+      width: 100%
+      margin: auto
+      &-for
+        img
+          margin: auto
+    &-for
+      position: relative
+    &-nav
+      display: none
+    &-arrows
+        &__left
+          display: block
+          position: absolute
+          top: 50%
+          left: 0
+          cursor: pointer
+          z-index: 1
+        &__right
+          display: block
+          position: absolute
+          top: 50%
+          right: 0
+          cursor: pointer
+          z-index: 1
+
+@media (max-width: 768px)
+  .rooms
+    &__btn
+      display: block
+      margin: auto
+    &-text
+      margin-bottom: 30px
