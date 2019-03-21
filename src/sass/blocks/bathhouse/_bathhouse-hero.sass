@@ -1,31 +1,23 @@
-.hero
-  background: url(../img/index/hero/hero-background.jpg) center no-repeat
+.bath-hero
+  background: url(../img/bathhouse/bathhouse-hero.jpg) center no-repeat
   background-size: cover
-  padding: 210px 0 190px 0
+  padding: 130px 0 85px 0
   text-align: center
-  position: relative
   margin-bottom: 24px
-  &__eagle
-    //display: none
-    position: relative
-    img
-      position: absolute
-      bottom: -40px
-      right: -5px
-      z-index: 99
   &__title
-    position: relative
-    font-size: 170px
+    font-size: 113px
     margin: 0 auto
-    margin-bottom: 25px
-    z-index: 100
+    margin-bottom: 70px
+  &__subtitle
+    font-size: 48px
+    margin-bottom: 23px
     &:after
       content: ""
       max-width: 583px
       border-bottom: 1px solid #fff
       display: block
       margin: auto
-      margin-top: 90px
+      margin-top: 35px
   &__description
     display: block
     margin: 0 auto
@@ -37,27 +29,31 @@
     line-height: 27px
   &__btn
     //max-width: 150px
-    width: 198px
-    height: 55px
+    width: 184px
+    height: 51px
     background-color: transparent
     border: 2px solid #fff
     border-radius: 30px
-    padding: 12px 28px 12px 28px
+    padding: 12px 24px 12px 25px
     &:hover
       background-color: $main-color
 
 @media (max-width: 1200px)
-  .hero
+  .bath-hero
     &__title
       font-size: 140px
+      line-height: 100px
 
 @media (max-width: 850px)
-  .hero 
+  .bath-hero
     padding: 150px 0 130px 0
     &__eagle
       display: none
     &__title
       font-size: 100px
+      line-height: 80px
+    &__subtitle
+      font-size: 35px
       &:after
         max-width: 400px
         margin-top: 60px
@@ -72,11 +68,14 @@
      
 
 @media (max-width: 610px)
-  .hero
+  .bath-hero
     padding: 110px 0 90px 0
     &__title
       font-size: 70px
+      line-height: 60px
       margin-bottom: 15px
+    &__subtitle
+      font-size: 30px
       &:after
         max-width: 250px
         margin-top: 35px
@@ -86,11 +85,13 @@
       line-height: 22px
 
 @media (max-width: 450px)
-  .hero
+  .bath-hero
     padding: 80px 0 60px 0
     &__title
       font-size: 50px
       margin-bottom: 10px
+    &__subtitle
+      line-height: 30px
       &:after
         max-width: 175px
         margin-top: 25px

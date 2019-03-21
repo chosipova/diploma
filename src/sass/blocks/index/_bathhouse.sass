@@ -1,7 +1,7 @@
-.numbers
-  padding: 86px 0 83px 0
-  margin-bottom: 44px
-  background: url('../img/index/numbers/bathhouse-bg.jpg') 0% 50% no-repeat, $bg-color 100% 50%
+.bathhouse
+  padding: 85px 0 90px 0
+  margin-bottom: 30px
+  background: url('../img/index/bathhouse/bathhouse-bg.jpg') 100% 50% no-repeat, $bg-color 0% 50%
   background-size: 56% 100%, 44%
   &-block
     display: flex
@@ -9,18 +9,18 @@
   &__title
     font-size: 100px
     line-height: 80px
-    text-align: right
-    margin-bottom: 44px
+    text-align: left
+    margin-bottom: 48px
   &-image
-    padding-right: 103px
+    padding-left: 110px
     flex-basis: 70%
     display: flex
     align-items: center
-    justify-content: flex-end
+    justify-content: flex-start
     &__line
-      width: 131px
+      width: 270px
   &-info
-    margin-left: 20px
+    margin-left: 5px
     &__title
       font-size: 30px
       margin-bottom: 15px
@@ -29,10 +29,10 @@
       max-width: 565px
       margin-bottom: 5px
     &__btn
-      margin-top: 22px
-      
+      margin-top: 25px
+
 @media (max-width: 1200px)
-  .numbers
+  .bathhouse
     &__title
       font-size: 80px
     &-image
@@ -43,10 +43,10 @@
         max-width: 450px
 
 @media (max-width: 910px)
-  .numbers
+  .bathhouse
     padding: 50px 0 60px 0
     &-info
-      margin-left: 25px
+      margin-right: 25px
       &__title
         font-size: 24px
       &__description
@@ -54,9 +54,8 @@
         font-size: 14px
 
 @media (max-width: 768px)
-  .numbers
+  .bathhouse
     padding: 40px 0 50px 0
-    margin-bottom: 20px
     &__title
       font-size: 60px
     &-info
@@ -66,15 +65,15 @@
         max-width: 300px
         font-size: 12px
         line-height: 16px
-       
+
 @media (max-width: 610px)
-  .numbers
+  .bathhouse
     padding: 30px 0 35px 0
     background: $bg-color
     &-image
       display: none
     &-info
-      margin-left: 0
+      margin-right: 0
       margin: auto
       &__title
         font-size: 22px

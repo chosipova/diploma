@@ -31,7 +31,106 @@
       display: block
       &:first-child
         margin-bottom: 7px
+  &-contacts
+    //margin-left: 50px
+    color: $contacts-nav
+    +regRoboto
+    font-size: 12px
+    display: flex
+    align-items: center
+    &__rel
+      max-width: 33px
+      position: relative
+      margin-right: 10px
+    &__icon
+      
+      width: 33px
+      height: 37px
+      &:before
+        position: absolute
+        top: -22px
+        right: 45%
+        height: 18px
+        content: ""
+        border: 1px solid $main-color
+      &:after
+        position: absolute
+        bottom: -17px
+        left: 50%
+        height: 18px
+        content: ""
+        border: 1px solid $main-color
+    span
+      line-height: 17px
+    a
+      color: $contacts-nav
+      text-decoration: none
+      display: block
+      font-size: 19px
+      line-height: 23px
+      margin-bottom: 3px
+      &:hover
+        color: $main-color
+        outline: 0
+        outline-offset: 0
+      &:active 
+        outline: 0
+        outline-offset: 0
+      &:focus
+        outline: 0
+        outline-offset: 0
+  &-contacts
+    //margin-left: 50px
+    color: #fff
+    +regRoboto
+    font-size: 12px
+    display: flex
+    align-items: center
+    &__rel
+      max-width: 33px
+      position: relative
+      margin-right: 10px
+    &__icon
+      width: 33px
+      height: 37px
+      &:before
+        position: absolute
+        top: -22px
+        right: 45%
+        height: 18px
+        content: ""
+        border: 1px solid $main-color
+      &:after
+        position: absolute
+        bottom: -17px
+        left: 50%
+        height: 18px
+        content: ""
+        border: 1px solid $main-color
+    span
+      line-height: 17px
+    a
+      color: #fff
+      text-decoration: none
+      display: block
+      font-size: 19px
+      line-height: 23px
+      margin-bottom: 3px
+      &:hover
+        color: $main-color
+        outline: 0
+        outline-offset: 0
+      &:active 
+        outline: 0
+        outline-offset: 0
+      &:focus
+        outline: 0
+        outline-offset: 0
 
+@media (max-width: 1200px)
+  .footer
+    &-contacts
+      display: none
 
 @media (max-width: 920px)
   .footer

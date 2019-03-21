@@ -1,63 +1,59 @@
 .navbar
-  padding: 24px 0 20px 0
-  color: $navbar-text
-  &-block
-    display: flex
-    flex-direction: row
-    align-items: center
-    position: relative
-  &__logo
-    margin-right: 64px
-  &-menu
-    margin-bottom: 10px
-    &__btn
-      display: none
-    &__item
-      padding-right: 20px
-      margin-right: 15px
-      border-right: 1px $border dotted
-      &:last-child
-        border-right: none
-      a
-        font-size: 13px
-        color: $navbar-text
-
-@media (max-width: 985px)
-  .navbar
-    &__logo
-      margin-right: 50px
-    &-menu
-      &__item
-        padding-right: 15px
-        margin-right: 10px
-        a
-          font-size: 11px
-
-@media (max-width: 768px)
-  .navbar
-    padding: 20px 0 15px 0
+  &-nomain
+    padding: 15px 0 10px 0
+    background-color: $bg-color
     &-block
-      flex-direction: column
-      align-items: flex-start
-    &-menu
-      margin: auto
-      margin-top: 30px
-      text-align: center
-      &__btn
-        display: block
-        margin-top: 10px
-        width: 45px
-        height: 35px
+      justify-content: space-between
+  &-contacts
+    margin-bottom: 10px
+    //margin-left: 30px
+    color: $contacts-nav
+    +regRoboto
+    font-size: 12px
+    display: flex
+    align-items: center
+    &__rel
+      max-width: 33px
+      position: relative
+      margin-right: 8px
+    &__icon
+      width: 33px
+      height: 37px
+      &:before
         position: absolute
-        right: 0
-        top: 0
-        cursor: pointer
-        transition: background-color .25s linear
-      &__list
-        display: none
-      &__item
-        display: block
-        border-right: none
-        border-bottom: 1px $border dotted
-        margin: 0
-        padding: 0
+        top: -22px
+        right: 45%
+        height: 18px
+        content: ""
+        border: 1px solid $main-color
+      &:after
+        position: absolute
+        bottom: -17px
+        left: 50%
+        height: 18px
+        content: ""
+        border: 1px solid $main-color
+    span
+      line-height: 17px
+    a
+      color: $contacts-nav
+      text-decoration: none
+      display: block
+      font-size: 19px
+      line-height: 23px
+      margin-bottom: 3px
+      &:hover
+        color: $main-color
+        outline: 0
+        outline-offset: 0
+      &:active 
+        outline: 0
+        outline-offset: 0
+      &:focus
+        outline: 0
+        outline-offset: 0
+
+@media (max-width: 1200px)
+  .navbar
+    &-contacts
+      display: none

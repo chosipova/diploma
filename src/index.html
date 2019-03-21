@@ -39,8 +39,8 @@
         <img src="img/index/hero/eagle.png" alt="eagle">
       </div>
       <div class="hero-block">
-        <h1 class="hero__title">Balaclava</h1>
-        <span class="hero__subtitle">«Белый дом с орлами» – место для спокойного отдыха у моря, вдали от шумного
+        <h1 class="hero__title title_franklin">Balaclava</h1>
+        <span class="hero__description">«Белый дом с орлами» – место для спокойного отдыха у моря, вдали от шумного
           города. Мы предлагаем Вам отдохнуть в самом сердце Балаклавы, невероятно живописном месте – балке
           Кефало-вриси»</span>
         <button class="button hero__btn">арендовать номер!</button>
@@ -57,7 +57,7 @@
       <div class="container">
         <div class="welcome-block">
           <div class="welcome__text">
-            <h2 class="welcome__title title">Добро пожаловать!</h2>
+            <h3 class="welcome__title title">Добро пожаловать!</h3>
             <p class="welcome__description description">Поверить в то, что когда-то Балаклава была закрытым районом
               Севастополя,
               уже почти невозможно — настолько вжился в наше
@@ -132,23 +132,26 @@
     </section>
 
     <section class="numbers">
-      <div class="numbers__image">
-        <!-- <img src="img/index/numbers/bathhouse-bg.jpg" alt=""> -->
-      </div>
       <div class="container">
         <div class="numbers-block">
-
+          <div class="numbers-image">
+            <h2 class="numbers__title title_franklin">уютные<br>
+              <span class="numbers-image__line line"></span>
+              номера</h2>
+          </div>
           <!-- /.numbers__image -->
-          <div class="numbers__info">
-            <h2 class="numbers__title title">Номера на любой вкус!</h2>
+          <div class="numbers-info">
+            <h3 class="numbers-info__title title">Номера на любой вкус!</h3>
             <!-- /.numbers__title -->
-            <p class="numbers__description description">Фирменный набор принадлежностей индивидуального пользования,
+            <p class="numbers-info__description description">Фирменный набор принадлежностей индивидуального
+              пользования,
               комплект
               махровых полотенец и другие предметы первой
               необходимости предусмотрены для каждого нашего гостя, остановившегося у нас, чтобы провести отличный
-              отдых в Балаклаве.
-              Все номера гостиничного комплекса имеют отдельные выходы на территорию!</p>
-            <button class="button numbers__btn">Показать номера!</button>
+              отдых в Балаклаве.</p>
+            <p class="numbers-info__description description">Все номера гостиничного комплекса имеют отдельные выходы
+              на территорию!</p>
+            <button class="numbers-info__btn button button_green">Показать номера!</button>
             <!-- /.numbers__descriptin -->
           </div>
           <!-- /.numbers__info -->
@@ -158,6 +161,73 @@
       <!-- /.container -->
     </section>
     <!-- /.numbers -->
+
+    <section class="bathhouse">
+      <div class="container">
+        <div class="bathhouse-block">
+          <div class="bathhouse-info">
+            <h3 class="bathhouse-info__title title">Отдых в бане у нас!</h3>
+            <!-- /.bathhouse__title -->
+            <p class="bathhouse-info__description description">Русская баня давно завоевала мировое признание. Миллионы
+              людей постоянно прибегают к этому простому и надежному способу
+              поддерживать здоровье, красоту, жизненный тонус и хорошее настроение. В X веке в Киево-Печерском
+              монастыре монахи, узнав
+              о пользе бани из древних книг, собранных в библиотеке, стали устраивать бани для лечебных целей, но на
+              русский манер.</p>
+            <button class="bathhouse-info__btn button button_green">более подробно!</button>
+            <!-- /.bathhouse__descriptin -->
+          </div>
+          <!-- /.bathhouse__info -->
+          <div class="bathhouse-image">
+            <h2 class="bathhouse__title title_franklin">русская<br>
+              баня <span class="bathhouse-image__line line"></span></h2>
+          </div>
+          <!-- /.bathhouse__image -->
+        </div>
+        <!-- /.bathhouse-block -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.bathhouse -->
+
+    <section class="attraction">
+      <div class="container">
+        <div class="attraction-block">
+          <h2 class="attraction__title title">Достопримечательности Балаклавы</h2>
+          <!-- /.attraction__title title -->
+          <span class="attraction__description description">Балаклава и ее окрестности имеют своеобразный облик: это и
+            уникальные памятники природы - мысы Айя и Фиолент, и остатки
+            величественной генуэзской крепости Чембало, и следы храмов,
+            овеянных поэтическими легендами.</span>
+          <!-- /.attraction__description description -->
+          <div class="attraction-list">
+            <div class="attraction-item">
+              <img src="img/index/attractions/museum.jpg" alt="museum">
+              <span class="attraction-item__date date">29 Марта, 2016</span>
+              <h4 class="attraction-item__name title">Военно-морской музей Балаклава <br>(Музей подводных лодок)</h4>
+            </div>
+            <div class="attraction-item">
+              <img src="img/index/attractions/temple.jpg" alt="temple">
+              <span class="attraction-item__date date">2 Апреля, 2016</span>
+              <h4 class="attraction-item__name title">Храм Двенадцати апостолов, <br>Балаклава</h4>
+            </div>
+            <div class="attraction-item">
+              <img src="img/index/attractions/fortress.jpg" alt="fortress">
+              <span class="attraction-item__date date">8 Апреля, 2016</span>
+              <h4 class="attraction-item__name title">Фортификационное сооружение, крепость Чембало</h4>
+            </div>
+          </div>
+          <!-- /.attraction__list -->
+          <button class="attraction__btn button button_green" onclick="window.location.href='attractions.html'">больше
+            статей!</button>
+          <!-- /.attraction__btn button -->
+        </div>
+        <!-- /.attraction-block -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.attraction -->
+
 
   </main>
 
@@ -192,6 +262,7 @@
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/menuBtnActive.js"></script>
+  <script src="js/wow.min.js"></script>
 
 </body>
 
