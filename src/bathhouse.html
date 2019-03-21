@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <title>Балаклава</title>
@@ -52,7 +52,7 @@
           прибегают к
           этому простому и надежному способу поддерживать здоровье, красоту,
           жизненный тонус и хорошее настроение. </span>
-        <button class="button bath-hero__btn">арендовать баню!</button>
+        <button class="bath__btn button button_green">арендовать баню!</button>
       </div>
       <!-- /.bath-hero-block -->
     </div>
@@ -135,14 +135,18 @@
 
   <div class="bath-slider">
     <div class="container">
-      <div class="bath-slider-block slider-for">
-        <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide1.jpg" alt="slide"></div>
-        <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide2.jpg" alt="slide"></div>
-        <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide3.jpg" alt="slide"></div>
-        <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide4.jpg" alt="slide"></div>
-        <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide5.jpg" alt="slide"></div>
-        <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide6.jpg" alt="slide"></div>
-        <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide7.jpg" alt="slide"></div>
+      <div class="slider-block__for">
+        <span class="arrows-for__left"><img src="img/bathhouse/slider/arrow-left.png" alt=""></span>
+        <div class="bath-slider-block slider-for">
+          <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide1.jpg" alt="slide"></div>
+          <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide2.jpg" alt="slide"></div>
+          <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide3.jpg" alt="slide"></div>
+          <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide4.jpg" alt="slide"></div>
+          <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide5.jpg" alt="slide"></div>
+          <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide6.jpg" alt="slide"></div>
+          <div class="bath-slider_slide"><img src="img/bathhouse/slider/slide7.jpg" alt="slide"></div>
+        </div>
+        <span class="arrows-for__right"><img src="img/bathhouse/slider/arrow-right.png" alt=""></span>
       </div>
       <div class="slider-block">
         <span class="arrows__left"><img src="img/bathhouse/slider/arrow-left.png" alt=""></span>
@@ -164,7 +168,7 @@
   <div class="article bath-article">
     <div class="container">
       <div class="article-block">
-        <h2 class="article__title title">Русская баня - отдых душой и телом!</h2>
+        <h2 class="article__title title bath-article__title">Русская баня - отдых душой и телом!</h2>
         <p>Русская баня давно завоевала мировое признание. Миллионы людей постоянно прибегают к этому простому и
           надежному
           способу поддерживать здоровье, красоту, жизненный тонус и хорошее настроение. В X веке в Киево-Печерском
@@ -206,6 +210,50 @@
     </div>
   </div>
 
+  <div class="bath-order">
+    <div class="container">
+      <h2 class="bath-order__title title title_franklin">закажите отдых прямо сейчас!</h2>
+      <!-- /.title title_franklin -->
+      <div class="bath-order-block">
+        <div class="bath-order__item">
+          <h4 class="subtitle bath-order__subtitle">Максимальное кол-во людей</h4>
+          <p class="description bath-order__description">Отдыхайте с пользой всей своей компанией у нас (6-7 человек)</p>
+        </div>
+        <!-- /.bath-order__item -->
+        <div class="bath-order__item">
+          <h4 class="subtitle bath-order__subtitle">Минимальный заказ</h4>
+          <p class="description bath-order__description">Вы можете провести в нашей банее сколько вам потребуется
+            времени
+            (минимум 2
+            часа)</p>
+        </div>
+        <div class="bath-order__item">
+          <h4 class="subtitle bath-order__subtitle">Оплата - 100р с человека</h4>
+          <p class="description bath-order__description">Отдых в шикарной бане не принесет вреда Вашему бюджету
+            (минимум 400р
+            в
+            час)</p>
+        </div>
+        <!-- /.bath-order__item -->
+        <!-- /.bath-order__item -->
+      </div>
+
+      <form action="" method="post" class="form bath-order__form">
+        <div class="bath-order-inputs form-inputs">
+
+          <input type="text" class="form__input bath-order__input " placeholder="Ваше имя...">
+          <input type="text" class="form__input bath-order__input" placeholder="Ваш номер телефона...">
+          <input type="text" class="form__input bath-order__input" placeholder="Ваш e-mail...">
+        </div>
+        <!-- /.bath-inputs inputs -->
+        <textarea class="form__mail bath-order__textarea" placeholder="Ваше сообщение..."></textarea>
+        <button class="bath__btn button button_green form__button">арендовать баню!</button>
+      </form>
+      <!-- /.form bath-order__form -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.bath-order -->
 
   <footer class="footer">
     <div class="container">
@@ -246,27 +294,56 @@
   </footer>
 
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/menuBtnActive.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/menuBtnActive.js"></script>
+
 
   <script>
     $(document).ready(function () {
       $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        prevArrow: $('.arrows-for__left'),
+        nextArrow: $('.arrows-for__right'),
         arrows: false,
         fade: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider-nav',
+        responsive: [{
+          breakpoint: 567,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true
+          }
+        }]
       });
       $('.slider-nav').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
         prevArrow: $('.arrows__left'),
         nextArrow: $('.arrows__right'),
+        responsive: [{
+          breakpoint: 680,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+          breakpoint: 920,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+          },
+        }],
         asNavFor: '.slider-for',
         dots: false,
         //centerMode: true,
-        focusOnSelect: true
+        focusOnSelect: true,
+
       });
     });
   </script>

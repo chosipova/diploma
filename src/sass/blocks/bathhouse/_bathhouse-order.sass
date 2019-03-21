@@ -1,0 +1,45 @@
+.bath
+  &-order
+    padding: 90px 0 74px 0
+    background: url('../img/bathhouse/order/order-bg.jpg') center no-repeat
+    background-size: cover
+    border-bottom: 5px solid rgba($border, 0.5)
+    margin-bottom: 19px
+    &__title
+      font-size: 48px 
+      line-height: 24px
+      text-align: center
+    &__subtitle
+      font-size: 17px
+      margin-bottom: 5px
+    &-block 
+      margin-top: 44px
+      margin-bottom: 41px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      text-align: center
+      color: #fff
+    &__item
+      flex-basis: 33%
+      &:nth-child(1)
+        flex-basis: 30%
+    &__description
+      color: #fff
+      text-align: center
+      font-size: 14px
+      line-height: 22px
+    &__form
+      margin: 0 80px
+
+@media (max-width: 920px)
+  .bath
+    &-order
+      &__title
+        line-height: 50px
+      &__subtitle
+        font-size: 12px
+      &__description
+        font-size: 11px
+        line-height: 18px
+      

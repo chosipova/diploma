@@ -1,48 +1,51 @@
-.bath-hero
-  background: url(../img/bathhouse/bathhouse-hero.jpg) center no-repeat
-  background-size: cover
-  padding: 130px 0 85px 0
-  text-align: center
-  margin-bottom: 24px
-  &__title
-    font-size: 113px
-    margin: 0 auto
-    margin-bottom: 70px
-  &__subtitle
-    font-size: 48px
-    margin-bottom: 23px
-    &:after
-      content: ""
-      max-width: 583px
-      border-bottom: 1px solid #fff
-      display: block
-      margin: auto
-      margin-top: 35px
-  &__description
-    display: block
-    margin: 0 auto
-    margin-bottom: 34px
-    max-width: 770px
-    color: #ffffff
-    +regOpenSans
-    font-size: 19px
-    line-height: 27px
+.bath
   &__btn
-    //max-width: 150px
-    width: 184px
-    height: 51px
-    background-color: transparent
-    border: 2px solid #fff
-    border-radius: 30px
-    padding: 12px 24px 12px 25px
-    &:hover
-      background-color: $main-color
+    border: 3px solid rgba(0, 0, 0, 0.23)
+  &-hero
+    background: url(../img/bathhouse/bathhouse-hero.jpg) center no-repeat
+    background-size: cover
+    padding: 130px 0 85px 0
+    text-align: center
+    margin-bottom: 24px
+    &__title
+      font-size: 113px
+      margin: 0 auto
+      margin-bottom: 70px
+    &__subtitle
+      font-size: 48px
+      margin-bottom: 23px
+      &:after
+        content: ""
+        max-width: 583px
+        border-bottom: 1px solid #fff
+        display: block
+        margin: auto
+        margin-top: 35px
+    &__description
+      display: block
+      margin: 0 auto
+      margin-bottom: 34px
+      max-width: 770px
+      color: #ffffff
+      +regOpenSans
+      font-size: 19px
+      line-height: 27px
+      // //max-width: 150px
+      // width: 184px
+      // height: 51px
+      // background-color: transparent
+      // border: 2px solid #fff
+      // border-radius: 30px
+      // padding: 12px 24px 12px 25px
+      // &:hover
+      // background-color: $main-color
+  
 
 @media (max-width: 1200px)
   .bath-hero
     &__title
       font-size: 140px
-      line-height: 100px
+      line-height: 120px
 
 @media (max-width: 850px)
   .bath-hero
