@@ -21,6 +21,7 @@
     //max-width: 1100px
     margin-left: 20px
     margin-right: 20px
+    outline: none
 .arrows
   &-for
     &__left
@@ -30,13 +31,13 @@
   &__left
     display: block
     position: absolute
-    top: 30%
+    top: 35%
     left: 0
     cursor: pointer
   &__right
     display: block
     position: absolute
-    top: 30%
+    top: 35%
     right: 0
     cursor: pointer
 .slick
@@ -46,7 +47,14 @@
 .bath
   &-slider
     background-color: $bg-color
-    padding: 71px 0 65px 0
+    padding: 74px 0 65px 0
+    &_slide
+      &:hover
+        outline: 0 !important
+        outline-offset: 0 !important
+      &:focus
+        outline: 0 !important
+        outline-offset: 0 !important
 
 @media (max-width: 1200px)
   .slider
@@ -81,14 +89,14 @@
       &__left
         display: block
         position: absolute
-        top: 50%
+        top: 43%
         left: 0
         cursor: pointer
         z-index: 1
       &__right
         display: block
         position: absolute
-        top: 50%
+        top: 43%
         right: 0
         cursor: pointer
         z-index: 1

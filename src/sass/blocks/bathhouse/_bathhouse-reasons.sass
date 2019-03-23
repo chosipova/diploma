@@ -1,5 +1,5 @@
 .bath-reasons
-  padding: 20px 0 55px 0
+  padding: 14px 0 55px 0
   border-top: 5px solid rgba($border, 0.5)
   margin-top: 19px
   &-block
@@ -12,16 +12,16 @@
   &__item
     color: $main-text
     line-height: 22px
-    margin: auto
-    margin-top: 30px
+    margin: 0
+    margin-top: 35px
     &:nth-child(1)
       padding-top: 20px
     &:nth-child(2)
       padding-top: 24px
     &:nth-child(4)
-      padding-top: 10px
+      padding-top: 12px
     &:nth-child(6)
-      padding-top: 16px
+      padding-top: 18px
   &__image
     margin-bottom: 12px
   &__title
@@ -33,13 +33,22 @@
     max-width: 359px
     +regRoboto
     font-size: 13.5px
+    line-height: 22px
     text-align: justify
     text-align-last: center
 
-@media (max-width: 768px)
-  .reasons
+@media (max-width: 1200px)
+  .bath-reasons
+    &-block
+      justify-content: space-around
+
+@media (max-width: 860px)
+  .bath-reasons
     padding-bottom: 40px
+    &-block
+      flex-direction: column
     &__item
+      margin: auto
       margin-top: 30px
       line-height: 16px
     &__title

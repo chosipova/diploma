@@ -260,10 +260,164 @@
     </div>
   </footer>
 
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <button class="button modal-dialog__close" id="close">&times;</button>
+      <h3 class="modal__title">Арендовать номер прямо сейчас!</h3>
+
+      <form action="mail.php" method="post" class="form modal__form" name="form" id="form">
+        <div class="modal-inputs form-inputs invalid-block">
+          <input type="text" name="username" class="form__input modal__input invalid-user" placeholder="Ваше имя...">
+          <input type="tel" name="userphone" class="form__input modal__input invalid-phone phone"
+            placeholder="Ваш номер телефона...">
+          <input type="email" name="email" class="form__input modal__input invalid-email" placeholder="Ваш e-mail...">
+        </div>
+        <!-- /.modal-inputs inputs -->
+        <textarea class="form__mail modal__textarea invalid-massage" name="massage"
+          placeholder="Ваше сообщение..."></textarea>
+        <button class="modal__btn button button_green form__button">арендовать номер!</button>
+      </form>
+    </div>
+    <!-- /.modal-dilog -->
+  </div>
+  <!-- /.modal -->
+
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/menuBtnActive.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/modal.js"></script>
 
+  <script>
+    $(document).ready(function () {
+
+      $('#form').validate({
+        errorClass: "invalid",
+        errorElement: "div",
+        rules: {
+          username: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          userphone: "required",
+          email: {
+            required: true,
+            email: true
+          },
+          massage: {
+            required: true,
+            minlength: 2
+          },
+        },
+        messages: {
+          username: {
+            minlength: jQuery.validator.format("Минимальное количество символов: 2"),
+            maxlength: jQuery.validator.format("Максимальное количество символов: 15"),
+            required: "Заполните поле"
+          },
+          userphone: {
+            required: "Заполните поле"
+          },
+          email: {
+            email: "Введите корректный email",
+            required: "Заполните поле"
+          },
+          massage: {
+            required: "Заполните поле",
+            minlength: jQuery.validator.format("Минимальное количество символов: 2")
+          }
+        }
+      })
+
+      $(".phone").mask("8 (999) 999-9999");
+
+      var sliders = {
+        1: {
+          slider: '#slider1',
+          nav: '#nav1',
+          left: '#left1_1',
+          right: '#right1_1',
+          leftfor: '#left1',
+          rightfor: '#right1'
+        },
+        2: {
+          slider: '#slider2',
+          nav: '#nav2',
+          left: '#left2_1',
+          right: '#right2_1',
+          leftfor: '#left2',
+          rightfor: '#right2'
+        },
+        3: {
+          slider: '#slider3',
+          nav: '#nav3',
+          left: '#left3_1',
+          right: '#right3_1',
+          leftfor: '#left3',
+          rightfor: '#right3'
+        },
+        4: {
+          slider: '#slider4',
+          nav: '#nav4',
+          left: '#left4_1',
+          right: '#right4_1',
+          leftfor: '#left4',
+          rightfor: '#right4'
+        },
+        5: {
+          slider: '#slider5',
+          nav: '#nav5',
+          left: '#left5_1',
+          right: '#right5_1',
+          leftfor: '#left5',
+          rightfor: '#right5'
+        }
+      };
+
+      $.each(sliders, function () {
+
+        $(this.slider).slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: this.leftfor,
+          nextArrow: this.rightfor,
+          arrows: false,
+          fade: true,
+          asNavFor: this.nav,
+          responsive: [{
+            breakpoint: 1124,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: true
+            }
+          }]
+        });
+        $(this.nav).slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          asNavFor: this.slider,
+          dots: false,
+          arrows: true,
+          prevArrow: this.left,
+          nextArrow: this.right,
+          centerMode: false,
+          focusOnSelect: true,
+          responsive: [{
+            breakpoint: 920,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          }],
+        });
+
+      });
+
+    });
+  </script>
 </body>
 
 </html>

@@ -52,7 +52,8 @@
           прибегают к
           этому простому и надежному способу поддерживать здоровье, красоту,
           жизненный тонус и хорошее настроение. </span>
-        <button class="bath__btn button button_green">арендовать баню!</button>
+        <button onClick='location.href="bathhouse.html#form"' class="bath__btn button button_green">арендовать
+          баню!</button>
       </div>
       <!-- /.bath-hero-block -->
     </div>
@@ -240,15 +241,17 @@
         <!-- /.bath-order__item -->
       </div>
 
-      <form action="#" method="post" class="form bath-order__form">
-        <div class="bath-order-inputs form-inputs">
-
-          <input type="text" class="form__input bath-order__input " placeholder="Ваше имя...">
-          <input type="text" class="form__input bath-order__input" placeholder="Ваш номер телефона...">
-          <input type="text" class="form__input bath-order__input" placeholder="Ваш e-mail...">
+      <form action="mail.php" method="post" class="form bath-order__form" name="form" id="form">
+        <div class="bath-order-inputs form-inputs invalid-block" >
+          <input type="text" name="username" class="form__input bath-order__input invalid-user"
+            placeholder="Ваше имя...">
+          <input type="tel" name="userphone" class="form__input bath-order__input invalid-phone phone"
+            placeholder="Ваш номер телефона...">
+          <input type="email" name="email" class="form__input bath-order__input invalid-email" placeholder="Ваш e-mail...">
         </div>
         <!-- /.bath-inputs inputs -->
-        <textarea class="form__mail bath-order__textarea" placeholder="Ваше сообщение..."></textarea>
+        <textarea class="form__mail bath-order__textarea invalid-massage" name="massage"
+          placeholder="Ваше сообщение..."></textarea>
         <button class="bath__btn button button_green form__button">арендовать баню!</button>
       </form>
       <!-- /.form bath-order__form -->
@@ -298,10 +301,54 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/menuBtnActive.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
 
 
   <script>
     $(document).ready(function () {
+
+      $('#form').validate({
+        errorClass: "invalid",
+        errorElement: "div",
+        rules: {
+          username: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          userphone: "required",
+          email: {
+            required: true,
+            email: true
+          },
+          massage: {
+            required: true,
+            minlength: 2
+          },
+        },
+        messages: {
+          username: {
+            minlength: jQuery.validator.format("Минимальное количество символов: 2"),
+            maxlength: jQuery.validator.format("Максимальное количество символов: 15"),
+            required: "Заполните поле"
+          },
+          userphone: {
+            required: "Заполните поле"
+          },
+          email: {
+            email: "Введите корректный email",
+            required: "Заполните поле"
+          },
+          massage: {
+            required: "Заполните поле",
+            minlength: jQuery.validator.format("Минимальное количество символов: 2")
+          }
+        }
+      })
+
+      $(".phone").mask("8 (999) 999-9999");
+      //слайдеры 
       $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,

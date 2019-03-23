@@ -12,13 +12,13 @@
       position: absolute
       bottom: -40px
       right: -5px
-      z-index: 99
+      //z-index: 99
   &__title
     position: relative
     font-size: 170px
     margin: 0 auto
     margin-bottom: 25px
-    z-index: 100
+    //z-index: 100
     &:after
       content: ""
       max-width: 583px
@@ -50,6 +50,13 @@
   .hero
     &__title
       font-size: 140px
+
+@media (max-width: 920px)
+  .hero
+    &__btn
+      &:hover
+        background-color: transparent
+        border: 2px solid #fff
 
 @media (max-width: 850px)
   .hero 

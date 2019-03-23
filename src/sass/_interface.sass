@@ -16,7 +16,26 @@ p
   line-height: 25px
   color: $main-text
   text-align: justify
-  
+
+a 
+  text-decoration: none
+
+input
+  &:hover
+    outline: 0
+    outline-offset: 0
+  &:focus
+    outline: 0 
+    outline-offset: 0 
+
+textarea
+  &:hover
+    outline: 0
+    outline-offset: 0
+  &:focus
+    outline: 0 
+    outline-offset: 0 
+
 .container
   width: 1140px
   margin: auto
@@ -51,15 +70,14 @@ p
       text-decoration: none
       &:hover
         color: $main-color
-        +boldOpenSans
         outline: 0
         outline-offset: 0
         cursor: pointer
+        transition: .5s ease-in-out
       &:active 
         outline: 0
         outline-offset: 0
       &:focus
-        +semiBoldOpenSans
         outline: 0
         outline-offset: 0
 
@@ -98,6 +116,53 @@ p
   height: 4px
   margin-bottom: 30px
 
+input.invalid
+  border: 2px solid red
+
+textarea.invalid
+  border: 2px solid red
+
+.invalid-block
+  position: relative
+
+
+div.invalid
+  padding-bottom: 10px
+  padding-left: 10px
+  color: red
+  font-size: 12px
+  +regRoboto
+  display: block
+  top: -20px
+  left: 0
+
+.bath-order__form div.invalid
+  color: #fff
+  font-size: 12px
+
+#username-error
+  position: absolute
+  top: -20px
+  left: 0
+
+#userphone-error
+  position: absolute
+  top: -20px
+  left: 34%
+
+#email-error
+  position: absolute
+  top: -20px
+  left: 68%
+
+#feedbackemail-error
+  position: absolute
+  top: -20px
+  left: 51%
+
+#massage-error
+  margin-top: 10px
+
 @media (max-width: 1200px)
   .container
     max-width: 1170px
@@ -120,6 +185,28 @@ p
           color: $main-text
           outline: 0
           outline-offset: 0
+  #username-error
+    top: -20px
+    left: 0
+  #userphone-error
+    top: 26%
+    left: 0
+  #email-error
+    top: 59%
+    left: 0
+  #feedbackemail-error
+    position: absolute
+    top: 38%
+    left: 0%
+  .button
+    &:hover
+      background-color: $main-color
+      border-color: $main-color
+  .bath
+    &__btn
+      font-size: 12px 
+      &:hover
+        border: 3px solid rgba(0, 0, 0, 0.23)
 
 @media (max-width: 850px)
   .button

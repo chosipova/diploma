@@ -1,0 +1,62 @@
+.modal
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(#000, 0.5)
+  display: none
+  &__title
+    padding: 20px 0
+    font-size: 18px
+    color: #fff
+    background-color: $main-color
+    +boldRoboto
+    text-transform: uppercase
+    text-align: center
+  &_active
+    display: flex
+  &__form
+    margin: 20px 30px
+  &-dialog
+    background-color: $bg-color
+    position: relative
+    margin: auto
+    max-width: 800px
+    width: 100%
+    padding-bottom: 10px
+    z-index: 105
+    &__close
+      position: absolute
+      top: 0
+      right: 0
+      padding: 15px
+      border-radius: 0
+      background-color: transparent
+      border: none
+      font-size: 20px
+
+
+@media (max-width: 920px)
+  .modal
+    &__title
+      font-size: 14px
+    &-dialog
+      max-width: 400px
+      width: 80%
+    &__input
+      height: 30px
+
+@media (max-width: 567px)
+  .modal
+    &__title
+      font-size: 10px
+    &__form
+      margin: 20px 15px
+    &-dialog
+      &__close
+        padding: 10px
+        font-size: 15px
+
+
+    

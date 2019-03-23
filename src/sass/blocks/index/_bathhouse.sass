@@ -2,7 +2,7 @@
   padding: 85px 0 90px 0
   margin-bottom: 30px
   background: url('../img/index/bathhouse/bathhouse-bg.jpg') 100% 50% no-repeat, $bg-color 0% 50%
-  background-size: 56% 100%, 44%
+  background-size: 53% 100%, 47%
   &-block
     display: flex
     justify-content: flex-start
@@ -33,6 +33,18 @@
   &__button
     border: 3px solid rgba(0, 0, 0, 0.23)
 
+@media (max-width: 200px) 
+  .bathhouse
+    background-size: 54.2% 100%, 45.8%
+    
+@media (max-width: 1762px) 
+  .bathhouse
+    background-size: 54.5% 100%, 45.5%
+
+@media (max-width: 1322px) 
+  .bathhouse
+    background-size: 56% 100%, 44%
+
 @media (max-width: 1200px)
   .bathhouse
     &__title
@@ -44,16 +56,18 @@
       &__description
         max-width: 450px
 
-@media (max-width: 910px)
+@media (max-width: 920px)
   .bathhouse
     padding: 50px 0 60px 0
     &-info
-      margin-right: 25px
+      margin-right: 0
       &__title
         font-size: 24px
       &__description
         max-width: 350px
         font-size: 14px
+    &-image
+      padding-left: 80px
 
 @media (max-width: 768px)
   .bathhouse

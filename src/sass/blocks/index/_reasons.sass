@@ -10,8 +10,8 @@
   &__item
     color: $main-text
     line-height: 21px
-    margin: auto
-    margin-top: 60px
+    //margin: auto
+    margin-top: 58px
   &__image
     margin-bottom: 16px
   &__title
@@ -27,9 +27,17 @@
     text-align: justify
     text-align-last: center
 
-@media (max-width: 768px)
+@media (max-width: 1200px)
+  .reasons
+    &__item
+      margin: auto
+      margin-bottom: 20px
+
+@media (max-width: 920px)
   .reasons
     padding-bottom: 40px
+    &-block
+      flex-direction: column
     &__item
       margin-top: 30px
       line-height: 16px

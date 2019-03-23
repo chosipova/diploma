@@ -2,7 +2,7 @@
   padding: 86px 0 83px 0
   margin-bottom: 44px
   background: url('../img/index/numbers/bathhouse-bg.jpg') 0% 50% no-repeat, $bg-color 100% 50%
-  background-size: 56% 100%, 44%
+  background-size: 53% 100%, 47%
   &-block
     display: flex
     justify-content: flex-start
@@ -30,6 +30,18 @@
       margin-bottom: 5px
     &__btn
       margin-top: 22px
+
+@media (max-width: 2000px) 
+  .numbers
+    background-size: 54.2% 100%, 45.8%
+    
+@media (max-width: 1762px) 
+  .numbers
+    background-size: 54.5% 100%, 45.5%
+
+@media (max-width: 1322px) 
+  .numbers
+    background-size: 56.2% 100%, 4%
       
 @media (max-width: 1200px)
   .numbers
@@ -42,17 +54,19 @@
       &__description
         max-width: 450px
 
-@media (max-width: 910px)
+@media (max-width: 920px)
   .numbers
     padding: 50px 0 60px 0
     &-info
-      margin-left: 25px
+      margin-left: 0
       &__title
         font-size: 24px
       &__description
         max-width: 350px
         font-size: 14px
-
+    &-image
+      padding-right: 80px
+      
 @media (max-width: 768px)
   .numbers
     padding: 40px 0 50px 0
